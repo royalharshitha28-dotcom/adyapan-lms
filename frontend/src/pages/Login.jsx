@@ -27,6 +27,7 @@ function Login() {
     );
 
     alert("Login Successful");
+    navigate("/dashboard");
 
   };
 
