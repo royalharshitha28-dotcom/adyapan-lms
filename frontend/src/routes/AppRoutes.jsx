@@ -15,7 +15,7 @@ import Register from "../pages/Register";
 import StudentDashboard from "../pages/StudentDashboard";
 import Profile from "../pages/Profile";
 import ProtectedRoute from "../components/ProtectedRoute";
-import CourseDetail from "../pages/CourseDetail";
+import CourseDetails from "../pages/CourseDetails";
 import MyCourses from "../pages/MyCourses";
 
 function AppRoutes() {
@@ -49,7 +49,7 @@ function AppRoutes() {
         />
         <Route
   path="/courses/:id"
-  element={<CourseDetail />}
+  element={<CourseDetails />}
 />
 
         <Route

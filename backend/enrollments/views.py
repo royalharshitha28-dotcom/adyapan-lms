@@ -1,9 +1,9 @@
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import viewsets
 from .models import Enrollment
 from .serializers import EnrollmentSerializer
 
 
-class EnrollmentViewSet(ModelViewSet):
+class EnrollmentViewSet(viewsets.ModelViewSet):
 
     queryset = Enrollment.objects.all()
 

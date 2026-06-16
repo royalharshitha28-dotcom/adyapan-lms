@@ -7,26 +7,17 @@ class Enrollment(models.Model):
 
     student = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name='enrollments'
+        on_delete=models.CASCADE
     )
 
     course = models.ForeignKey(
         Course,
-        on_delete=models.CASCADE,
-        related_name='enrolled_students'
+        on_delete=models.CASCADE
     )
 
     enrolled_at = models.DateTimeField(
         auto_now_add=True
     )
-
-    is_active = models.BooleanField(
-        default=True
-    )
-
-    class Meta:
-        unique_together = ('student', 'course')
 
     def __str__(self):
         return f"{self.student.username} - {self.course.title}"
